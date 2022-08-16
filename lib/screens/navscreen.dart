@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_caurosal/screens/homepage.dart';
 import 'package:test_caurosal/screens/homescreen.dart';
 
 class NavScreen extends StatefulWidget {
@@ -13,37 +12,41 @@ class _NavScreenState extends State<NavScreen> {
   int _selectedIndex = 0;
 
   final _screen = [
-    MyWidget(),
+    HomeScreen(),
+    const Scaffold(
+      body: Center(
+        child: Text(
+          'หน้าแรก',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    ),
     const Scaffold(
         body: Center(
-          child: Text(
-            'ใหม่และมาแรง',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        backgroundColor: Colors.black),
+      child: Text(
+        'ใหม่และมาแรง',
+        style: TextStyle(color: Colors.white),
+      ),
+    )),
     const Scaffold(
         body: Center(
-          child: Text(
-            'ค้นหา',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        backgroundColor: Colors.black),
+      child: Text(
+        'ค้นหา',
+        style: TextStyle(color: Colors.white),
+      ),
+    )),
     const Scaffold(
         body: Center(
-          child: Text(
-            'เนื้อหาดาวน์โหลด',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        backgroundColor: Colors.black)
+      child: Text(
+        'เนื้อหาดาวน์โหลด',
+        style: TextStyle(color: Colors.white),
+      ),
+    ))
   ];
   @override
   Widget build(BuildContext context) {
-    print(_selectedIndex);
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         bottomNavigationBar: bottom(),
         body: Stack(
           children: _screen

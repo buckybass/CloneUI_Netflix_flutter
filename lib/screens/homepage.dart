@@ -37,6 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: const Color.fromRGBO(0, 0, 0, 200),
         ),
       ],
-    ),bottomNavigationBar: const NavScreen(),);
+    ));
   }
 }
