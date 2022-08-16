@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_caurosal/screens/homepage.dart';
 import 'package:test_caurosal/screens/navscreen.dart';
-
 void main() {
   runApp(
     const MyApp(),
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           bottomNavigationBarTheme:
               const BottomNavigationBarThemeData(selectedItemColor: Colors.white)),
-      home: const MyHomePage(),
+      home: const NavScreen(),
     );
   }
 }
